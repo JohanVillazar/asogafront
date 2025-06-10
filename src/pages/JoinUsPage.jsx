@@ -32,7 +32,7 @@ const JoinUsPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/auth/register', formData);
+      const res = await axios.post('https://asogafback.onrender.com/auth/register', formData);
       const { token, user } = res.data;
 
       localStorage.setItem('token', token);

@@ -49,7 +49,7 @@ const AfiliacionPage = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:5000/afiliacion',
+        'https://asogafback.onrender.com/afiliacion',
         { hijos },
         { headers: { Authorization: `Bearer ${token}` } }
       );
