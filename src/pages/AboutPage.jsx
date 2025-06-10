@@ -7,7 +7,7 @@ import { Users, Target, Eye } from 'lucide-react';
 const AboutPage = () => {
   const teamMembers = [
     {
-      name: 'Fedy Moreno',
+      name: 'Fredy Moreno',
       role: 'Presidente',
       image: '/presidente.png',
     },

@@ -24,7 +24,8 @@ const PaymentModal = ({ isOpen, onClose, user }) => {
           Se han guardado tus datos, procede con el pago
         </h2>
         <p className="mb-6">
-          Realiza el pago de tu afiliación a los siguientes números de Nequi o Daviplata: 3118476543,una vez realizado el pago:
+          Realiza el pago de tu afiliación a los siguientes números de Nequi o Daviplata:
+          <span className="font-bold text-lg">3118476543</span>, una vez realizado el pago:
         </p>
         <div className="flex justify-center">
           <a
