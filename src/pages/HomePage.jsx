@@ -36,14 +36,7 @@ const HomePage = () => {
 
   const upcomingEvents = [
 
-    {
-      id: 2,
-      title: 'Bono Solidario',
-      date: 'Juega el 23 de Agosto',
-      description:
-        '¡El Bono Solidario es una iniciativa importante que permite a la Asociación de Padres de Familia recolectar fondos destinados a los diferentes proyectos en beneficio de los estudiantes y sus familias. Compra un bono y contribuye al bienestar escolar de tus hijos!',
-      image: '/bono.jpg',
-    },
+
   
   ];
 
