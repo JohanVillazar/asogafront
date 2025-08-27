@@ -35,9 +35,12 @@ const HomePage = () => {
   ];
 
   const upcomingEvents = [
-
-
-  
+        {
+      id: 1,
+   
+      image: "/aviso.jpg", // Ajusta la ruta a tu carpeta public
+     
+    },
   ];
 
   return (
@@ -157,7 +160,7 @@ const HomePage = () => {
           <img
             src={evento.image}
             alt={evento.title}
-            className="w-full h-48 object-contain"
+            className="w-full h-full object-contain"
           />
           <CardHeader>
             <CardTitle className="text-brand-blue">
@@ -170,17 +173,7 @@ const HomePage = () => {
           <CardContent className="flex-grow">
             <p className="text-sm text-gray-700">{evento.description}</p>
           </CardContent>
-          <div className="p-6 pt-0">
-            {/* Botón de "Comprar Bono" que redirige a WhatsApp */}
-            <a
-              href="https://wa.me/573118476543?text=Hola%2C%20quiero%20comprar%20boleta%20bono%20solidario."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary px-8 py-4 text-lg bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition"
-            >
-              Comprar Boleta
-            </a>
-          </div>
+      
         </Card>
       ))}
     </div>
