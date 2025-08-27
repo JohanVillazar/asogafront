@@ -29,7 +29,7 @@ const events = [
     title: 'Bono Solidario',
     date: ' 23 Agosto 2025',
     description: ' Lo más emocionante de esta campaña es que, al participar, las familias tienen la posibilidad de ganar excelentes premios, pensados para agradecer su compromiso y apoyo constante. Esta actividad combina solidaridad con incentivos, haciendo del aporte una experiencia enriquecedora y divertida',
-    category: 'Proximo',
+    category: 'Cancelado',
     imageKey: '/bono.jpg'
   },
      {
