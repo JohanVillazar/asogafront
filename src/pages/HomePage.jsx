@@ -170,9 +170,7 @@ const HomePage = () => {
               {evento.date}
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex-grow">
-            <p className="text-sm text-gray-700">{evento.description}</p>
-          </CardContent>
+       
       
         </Card>
       ))}
