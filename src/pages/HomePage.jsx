@@ -37,8 +37,22 @@ const HomePage = () => {
   const upcomingEvents = [
         {
       id: 1,
-   
-      image: "/aviso.jpg", // Ajusta la ruta a tu carpeta public
+      title:"Detalle Graduados",
+      description:"Jardin,Transicion,Quinto,Noveno",
+      image: "detalles1.jpeg", // Ajusta la ruta a tu carpeta public
+    },
+            {
+      id: 2,
+      title:"Buffet y Recordatorio",
+      description:"A los Grados 11",
+      image: "/buffet.jpeg", // Ajusta la ruta a tu carpeta public
+     
+    },
+               {
+      id: 3,
+      title:"Entrega de Anchetas",
+      description:"A los Docentes y Personal Administrativo",
+      image: "/detalles.jpeg", // Ajusta la ruta a tu carpeta public
      
     },
   ];
@@ -143,13 +157,11 @@ const HomePage = () => {
       </section>
 
       {/* Próximos Eventos en Grid */}
-
   <section className="py-16 bg-blue-50 rounded-lg shadow-xl">
   <div className="page-container">
     <h2 className="text-3xl font-bold text-center mb-10 gradient-text">
       Próximos Eventos
     </h2>
-    
     {/* Si solo hay un evento, lo centramos en la pantalla */}
     <div className={`grid ${upcomingEvents.length === 1 ? 'place-items-center' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3'} gap-8`}>
       {upcomingEvents.map((evento) => (
@@ -169,9 +181,10 @@ const HomePage = () => {
             <CardDescription className="text-yellow-600">
               {evento.date}
             </CardDescription>
+            <CardDescription className="text-black-900">
+              {evento.description}
+            </CardDescription>
           </CardHeader>
-       
-      
         </Card>
       ))}
     </div>

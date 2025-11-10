@@ -27,24 +27,24 @@ export default function UrgentNewsPopup() {
 
         {/* Contenido */}
         <div className="text-gray-700 text-sm space-y-4 text-justify">
+          <p>Debido a que no se pudo realizar el Bono solidario.</p>A los
+          Asociados que colaboraron se les hará devolución de su aporte o
+          dinero, dicha devolución se hará por los metodos: Nequi,Daviplata y/o
+          cuentas.
+          <p></p>
+          Pedimos disculpas por las molestias causadas, y lamentamos no poder
+          realizar dicho evento.
           <p>
-          Nos permitimos informarles que el pasado 13 de septiembre no fue posible adelantar la solicitud de sus datos personales para la actualización y consolidación de la base de datos de la Asociación, 
-          debido a que no contamos con la autorización de la institución para realizar dicho proceso.
+            Cualquier duda o ampliación de esta información se puede comunicar a
+            los siguientes medios de contacto :
+            <strong>asopadresgaf@gmail.com</strong> o al celular{" "}
+            <strong>3208013556</strong>.
           </p>
-
-          <p>
-            De igual manera, lamentamos comunicarles que este año no se llevará a cabo la tradicional Jornada de Integración Familiar, 
-            organizada como es habitual por Asopadres GAF. La institución, mediante comunicación escrita, manifestó que no brindará apoyo logístico, institucional ni de personal para la realización del evento, argumentando que el cronograma académico ya se encuentra definido hasta el mes de noviembre. Asimismo,
-             indicó que dicha actividad implica costos locativos y administrativos que no está en posibilidad de asumir en este momento.
+          <p className="text-right font-medium">
+            Cordialmente,
+            <br />
+            Asopadres GAF
           </p>
-
-          <p>
-            Lamentamos profundamente no poder realizar este espacio de encuentro que año tras año fortalece los lazos entre nuestras 
-            familias. 
-            Agradecemos su comprensión y reiteramos nuestro compromiso con el bienestar de toda la comunidad educativa.
-          </p>
-
-          <p className="text-right font-medium">Cordialmente,<br />Asopadres GAF</p>
         </div>
 
         {/* Botón */}
