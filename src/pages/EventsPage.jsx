@@ -40,7 +40,27 @@ const events = [
     category: 'Pasado',
     imageKey: '/maestro.jpg'
   },
-  
+
+  {
+  id: 3,
+  title: 'COMUNICADO',
+  date: '',
+  description: `
+    Debido a que no se pudo realizar el Bono solidario, a los
+    Asociados que colaboraron se les hará devolución de su aporte o
+    dinero. Dicha devolución se hará por los métodos: Nequi, Daviplata
+    y/o cuentas bancarias.
+
+    Cualquier duda o ampliación de esta información se puede comunicar a
+    los siguientes medios de contacto:
+    asopadresgaf@gmail.com o al celular 3208013556.
+  `,
+  category: 'AVISO!',
+  imageKey: 'https://cdn.pixabay.com/photo/2024/12/23/17/21/ai-generated-9287024_1280.png'
+}
+
+
+
 ];
 
 const EventsPage = () => {

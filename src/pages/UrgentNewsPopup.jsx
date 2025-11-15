@@ -22,24 +22,35 @@ export default function UrgentNewsPopup() {
 
         {/* Título */}
         <h2 className="text-xl font-bold text-red-600 mb-4 leading-snug">
-          Apreciadas familias:
+          COMUNICADO A LOS PADRES DE FAMILIA
         </h2>
 
         {/* Contenido */}
         <div className="text-gray-700 text-sm space-y-4 text-justify">
-          <p>Debido a que no se pudo realizar el Bono solidario.</p>A los
-          Asociados que colaboraron se les hará devolución de su aporte o
-          dinero, dicha devolución se hará por los metodos: Nequi,Daviplata y/o
-          cuentas.
-          <p></p>
-          Pedimos disculpas por las molestias causadas, y lamentamos no poder
-          realizar dicho evento.
-          <p>
-            Cualquier duda o ampliación de esta información se puede comunicar a
-            los siguientes medios de contacto :
-            <strong>asopadresgaf@gmail.com</strong> o al celular{" "}
-            <strong>3208013556</strong>.
-          </p>
+
+          <p>Respetados padres de familia:</p>
+
+<p>
+  La Asociación de Padres de Familia del Colegio Giovanni Antonio
+  Farina <strong>(ASOPADRES GAF)</strong> informa que el valor de la afiliación
+  correspondiente al año 2026 ha sido establecido en treinta y cinco
+  mil pesos <strong>($35.000)</strong> por familia.
+</p>
+
+<p>
+  El recaudo de este valor se llevará a cabo los días 
+  <strong> 22 y 27 de noviembre </strong>
+  del presente año, directamente por los miembros de la Asociación, quienes
+  estarán ubicados en las instalaciones del colegio durante la jornada escolar.
+</p>
+
+<p>
+  Agradecemos su compromiso y participación activa en esta labor que busca 
+  el bienestar común de nuestra comunidad educativa.
+</p>
+
+
+
           <p className="text-right font-medium">
             Cordialmente,
             <br />
