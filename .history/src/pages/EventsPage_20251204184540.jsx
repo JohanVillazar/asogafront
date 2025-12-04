@@ -53,7 +53,7 @@ const events = [
     description: `INFORME JUNTA DIRECTIVA ASOPADRES AÑO 2025`,
     category: 'Documento',
     imageKey:
-      'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg',
+      'https://cdn.pixabay.com/photo/2024/12/23/17/21/ai-generated-9287024_1280.png',
     pdfUrl: '/junta.pdf'
   }
 ];

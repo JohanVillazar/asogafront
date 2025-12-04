@@ -18,7 +18,7 @@ const events = [
     id: 3,
     title: 'Dia de Los Niños',
     date: '25 de Abril de 2025',
-    description: 'El Día del Niño es una fecha muy especial para la Asociación de Padres de Familia del Colegio Giovanni Antonio Farina, ya que nos permite celebrar la alegría, inocencia y vitalidad de nuestros estudiantes. En esta ocasión, buscamos que cada niño se sienta valorado y feliz, ofreciéndoles un espacio lleno de diversión y afecto. Como parte de esta celebración, se les brinda un delicioso refrigerio que disfrutan con entusiasmo, en medio de actividades lúdicas que fortalecen su sentido de pertenencia y alegría en el entorno escolar.',
+    description: 'El Día del Niño es una fecha...',
     category: 'Pasado',
     imageKey: '/dianino.png'
   },
@@ -26,7 +26,7 @@ const events = [
     id: 2,
     title: 'Bono Solidario',
     date: '23 Agosto 2025',
-    description: ' Lo más emocionante de esta campaña es que, al participar, las familias tienen la posibilidad de ganar excelentes premios, pensados para agradecer su compromiso y apoyo constante. Esta actividad combina solidaridad con incentivos, haciendo del aporte una experiencia enriquecedora y divertida',
+    description: 'Lo más emocionante de esta campaña...',
     category: 'Cancelado',
     imageKey: '/bono.jpg'
   },
@@ -34,7 +34,7 @@ const events = [
     id: 4,
     title: 'Dia del Profesor',
     date: '',
-    description: 'Lo más emocionante de esta campaña es que, al participar, las familias tienen la posibilidad de ganar excelentes premios, pensados para agradecer su compromiso y apoyo constante. Esta actividad combina solidaridad con incentivos, haciendo del aporte una experiencia enriquecedora y divertida.',
+    description: 'En esta campaña las familias...',
     category: 'Pasado',
     imageKey: '/maestro.jpg'
   },
@@ -42,9 +42,9 @@ const events = [
     id: 5,
     title: 'COMUNICADO',
     date: '',
-    description: 'Debido a que no se pudo realizar el Bono solidario, a los Asociados que colaboraron se les hará devolución de su aporte o dinero. Dicha devolución se hará por los métodos: Nequi, Daviplata y/o cuentas bancarias. Cualquier duda o ampliación de esta información se puede comunicar a los siguientes medios de contacto: asopadresgaf@gmail.com o al celular 3208013556.',
+    description: 'Debido a que no se pudo realizar...',
     category: 'AVISO!',
-    imageKey: 'https://images.pexels.com/photos/8846035/pexels-photo-8846035.jpeg'
+    imageKey: 'https://cdn.pixabay.com/photo/2024/12/23/17/21/ai-generated-9287024_1280.png'
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const events = [
     description: `INFORME JUNTA DIRECTIVA ASOPADRES AÑO 2025`,
     category: 'Documento',
     imageKey:
-      'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg',
+      'https://cdn.pixabay.com/photo/2024/12/23/17/21/ai-generated-9287024_1280.png',
     pdfUrl: '/junta.pdf'
   }
 ];

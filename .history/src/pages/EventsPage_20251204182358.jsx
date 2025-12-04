@@ -10,7 +10,8 @@ const events = [
     id: 1,
     title: 'Dia de las Madres ',
     date: '25 de Mayo de 2025',
-    description: 'Este día especial está acompañado por una hermosa serenata que llena de emoción y alegría a nuestras madres, quienes también reciben un recordatorio significativo que reconoce su invaluable labor como pilares del hogar y guías en la formación de sus hijos.',
+    description:
+      'Este día especial está acompañado...',
     category: 'Pasado',
     imageKey: '/madredia.png'
   },
@@ -18,7 +19,7 @@ const events = [
     id: 3,
     title: 'Dia de Los Niños',
     date: '25 de Abril de 2025',
-    description: 'El Día del Niño es una fecha muy especial para la Asociación de Padres de Familia del Colegio Giovanni Antonio Farina, ya que nos permite celebrar la alegría, inocencia y vitalidad de nuestros estudiantes. En esta ocasión, buscamos que cada niño se sienta valorado y feliz, ofreciéndoles un espacio lleno de diversión y afecto. Como parte de esta celebración, se les brinda un delicioso refrigerio que disfrutan con entusiasmo, en medio de actividades lúdicas que fortalecen su sentido de pertenencia y alegría en el entorno escolar.',
+    description: 'El Día del Niño es una fecha...',
     category: 'Pasado',
     imageKey: '/dianino.png'
   },
@@ -26,7 +27,7 @@ const events = [
     id: 2,
     title: 'Bono Solidario',
     date: '23 Agosto 2025',
-    description: ' Lo más emocionante de esta campaña es que, al participar, las familias tienen la posibilidad de ganar excelentes premios, pensados para agradecer su compromiso y apoyo constante. Esta actividad combina solidaridad con incentivos, haciendo del aporte una experiencia enriquecedora y divertida',
+    description: 'Lo más emocionante de esta campaña...',
     category: 'Cancelado',
     imageKey: '/bono.jpg'
   },
@@ -34,7 +35,7 @@ const events = [
     id: 4,
     title: 'Dia del Profesor',
     date: '',
-    description: 'Lo más emocionante de esta campaña es que, al participar, las familias tienen la posibilidad de ganar excelentes premios, pensados para agradecer su compromiso y apoyo constante. Esta actividad combina solidaridad con incentivos, haciendo del aporte una experiencia enriquecedora y divertida.',
+    description: 'En esta campaña las familias...',
     category: 'Pasado',
     imageKey: '/maestro.jpg'
   },
@@ -42,9 +43,13 @@ const events = [
     id: 5,
     title: 'COMUNICADO',
     date: '',
-    description: 'Debido a que no se pudo realizar el Bono solidario, a los Asociados que colaboraron se les hará devolución de su aporte o dinero. Dicha devolución se hará por los métodos: Nequi, Daviplata y/o cuentas bancarias. Cualquier duda o ampliación de esta información se puede comunicar a los siguientes medios de contacto: asopadresgaf@gmail.com o al celular 3208013556.',
+    description: `
+      Debido a que no se pudo realizar el Bono solidario,
+      a los Asociados que colaboraron se les hará devolución...
+    `,
     category: 'AVISO!',
-    imageKey: 'https://images.pexels.com/photos/8846035/pexels-photo-8846035.jpeg'
+    imageKey:
+      'https://cdn.pixabay.com/photo/2024/12/23/17/21/ai-generated-9287024_1280.png'
   },
   {
     id: 6,
@@ -53,7 +58,7 @@ const events = [
     description: `INFORME JUNTA DIRECTIVA ASOPADRES AÑO 2025`,
     category: 'Documento',
     imageKey:
-      'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg',
+      'https://cdn.pixabay.com/photo/2024/12/23/17/21/ai-generated-9287024_1280.png',
     pdfUrl: '/junta.pdf'
   }
 ];
@@ -73,16 +78,16 @@ const EventsPage = () => {
           >
             <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
 
-              {/* CLICK PARA VER PDF SI EXISTE */}
+              {/* CLICK PARA VER PDF SOLO SI EXISTE */}
               <div
                 className="relative cursor-pointer"
                 onClick={() => item.pdfUrl && setSelectedPdf(item.pdfUrl)}
               >
                 {item.pdfUrl ? (
-                  <img
-                    src={item.imageKey}
-                    alt={item.title}
-                    className="w-full h-48 object-cover"
+                  <iframe
+                    title={item.title}
+                    src={`${item.pdfUrl}#toolbar=0&navpanes=0`}
+                    className="w-full h-48 object-cover border-0"
                   />
                 ) : (
                   <img
@@ -92,8 +97,13 @@ const EventsPage = () => {
                   />
                 )}
 
-                <div className={`absolute top-2 right-2 px-3 py-1 text-xs font-semibold text-white rounded-full 
-                  ${item.category === 'Proximo' ? 'bg-brand-blue' : 'bg-brand-yellow text-gray-900'}`}>
+                <div
+                  className={`absolute top-2 right-2 px-3 py-1 text-xs font-semibold text-white rounded-full ${
+                    item.category === 'Proximo'
+                      ? 'bg-brand-blue'
+                      : 'bg-brand-yellow text-gray-900'
+                  }`}
+                >
                   {item.category}
                 </div>
               </div>
@@ -101,25 +111,17 @@ const EventsPage = () => {
               <CardHeader>
                 <CardTitle className="text-xl text-brand-blue">{item.title}</CardTitle>
                 <CardDescription className="text-sm text-yellow-600 flex items-center">
-                  {item.category === 'Evento'
-                    ? <CalendarDays className="mr-2 h-4 w-4" />
-                    : <Newspaper className="mr-2 h-4 w-4" />}
+                  {item.category === 'Evento' ? (
+                    <CalendarDays className="mr-2 h-4 w-4" />
+                  ) : (
+                    <Newspaper className="mr-2 h-4 w-4" />
+                  )}
                   {item.date}
                 </CardDescription>
               </CardHeader>
 
               <CardContent className="flex-grow">
                 <p className="text-gray-700 text-sm">{item.description}</p>
-
-                {/* BOTÓN VER PDF */}
-                {item.pdfUrl && (
-                  <button
-                    onClick={() => setSelectedPdf(item.pdfUrl)}
-                    className="mt-4 w-full bg-brand-blue text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
-                  >
-                    Ver PDF
-                  </button>
-                )}
               </CardContent>
             </Card>
           </motion.div>
@@ -136,4 +138,3 @@ const EventsPage = () => {
 };
 
 export default EventsPage;
-

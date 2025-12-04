@@ -125,7 +125,7 @@ const galleryData = {
       folder:"",
       description:" Diciembre 2025",
       cover:"evento2_bldi7g",
-      images:["evento3_rrnnjv","evento7_j1oguo","evento6_s8fgni","evento5_dqhpmz","evento4_olfaqz","evento1_rdmsec"]
+      images:["evento3_rrnnjv","evento7_j1oguo",""]
 
     }
   ],

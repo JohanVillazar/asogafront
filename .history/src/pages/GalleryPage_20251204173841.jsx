@@ -124,8 +124,8 @@ const galleryData = {
         {
       folder:"",
       description:" Diciembre 2025",
-      cover:"evento2_bldi7g",
-      images:["evento3_rrnnjv","evento7_j1oguo","evento6_s8fgni","evento5_dqhpmz","evento4_olfaqz","evento1_rdmsec"]
+      cover:"https://res.cloudinary.com/dywebznfa/image/upload/evento2_bldi7g.jpg",
+      images:["WhatsApp_Image_2025-05-19_at_7.02.22_AM_1_hursm1","WhatsApp_Image_2025-05-19_at_7.02.21_AM_ncxino"]
 
     }
   ],
