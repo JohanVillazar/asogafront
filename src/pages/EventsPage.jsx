@@ -1,0 +1,139 @@
+import React, { useState } from 'react';
+import PageLayout from '@/components/layout/PageLayout';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { motion } from 'framer-motion';
+import { CalendarDays, Newspaper } from 'lucide-react';
+import PdfViewerModal from '@/components/ui/PdfViewerModal';
+
+const events = [
+  {
+    id: 1,
+    title: 'Junta Delegados ASOPADRES GAF',
+    date: '08 Mayo 2026',
+    description: 'Se llevará a cabo la reunion de miembros que se celebrará de manera presencial en las instalaciones del Colegio Giovanni Antonio Farina ubicado en la Carrera 88, Cl 54 f Bis Sur # 29 Sur, Bosa Brasil de la ciudad de Bogotá D.C, el viernes 08 de mayo de 2026 a las 8:00 a.m.',
+    category: 'Proximo',
+    imageKey: 'https://images.pexels.com/photos/6949392/pexels-photo-6949392.jpeg'
+  },
+  {
+    id: 3,
+    title: 'Dia de Los Niños',
+    date: '25 de Abril de 2025',
+    description: 'El Día del Niño es una fecha muy especial para la Asociación de Padres de Familia del Colegio Giovanni Antonio Farina, ya que nos permite celebrar la alegría, inocencia y vitalidad de nuestros estudiantes. En esta ocasión, buscamos que cada niño se sienta valorado y feliz, ofreciéndoles un espacio lleno de diversión y afecto. Como parte de esta celebración, se les brinda un delicioso refrigerio que disfrutan con entusiasmo, en medio de actividades lúdicas que fortalecen su sentido de pertenencia y alegría en el entorno escolar.',
+    category: 'Pasado',
+    imageKey: '/dianino.png'
+  },
+  {
+    id: 2,
+    title: 'Bono Solidario',
+    date: '23 Agosto 2025',
+    description: ' Lo más emocionante de esta campaña es que, al participar, las familias tienen la posibilidad de ganar excelentes premios, pensados para agradecer su compromiso y apoyo constante. Esta actividad combina solidaridad con incentivos, haciendo del aporte una experiencia enriquecedora y divertida',
+    category: 'Cancelado',
+    imageKey: '/bono.jpg'
+  },
+  {
+    id: 4,
+    title: 'Dia del Profesor',
+    date: '',
+    description: 'Lo más emocionante de esta campaña es que, al participar, las familias tienen la posibilidad de ganar excelentes premios, pensados para agradecer su compromiso y apoyo constante. Esta actividad combina solidaridad con incentivos, haciendo del aporte una experiencia enriquecedora y divertida.',
+    category: 'Pasado',
+    imageKey: '/maestro.jpg'
+  },
+  {
+    id: 5,
+    title: 'COMUNICADO',
+    date: '',
+    description: 'Debido a que no se pudo realizar el Bono solidario, a los Asociados que colaboraron se les hará devolución de su aporte o dinero. Dicha devolución se hará por los métodos: Nequi, Daviplata y/o cuentas bancarias. Cualquier duda o ampliación de esta información se puede comunicar a los siguientes medios de contacto: asopadresgaf@gmail.com o al celular 3208013556.',
+    category: 'AVISO!',
+    imageKey: 'https://images.pexels.com/photos/8846035/pexels-photo-8846035.jpeg'
+  },
+  {
+    id: 6,
+    title: 'Informe Junta Directiva',
+    date: '',
+    description: `INFORME JUNTA DIRECTIVA ASOPADRES AÑO 2025`,
+    category: 'Documento',
+    imageKey:
+      'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg',
+    pdfUrl: '/junta.pdf'
+  }
+];
+
+const EventsPage = () => {
+  const [selectedPdf, setSelectedPdf] = useState(null);
+
+  return (
+    <PageLayout title="Eventos Proximos y Pasados">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {events.map((item, index) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+
+              {/* CLICK PARA VER PDF SI EXISTE */}
+              <div
+                className="relative cursor-pointer"
+                onClick={() => item.pdfUrl && setSelectedPdf(item.pdfUrl)}
+              >
+                {item.pdfUrl ? (
+                  <img
+                    src={item.imageKey}
+                    alt={item.title}
+                    className="w-full h-48 object-cover"
+                  />
+                ) : (
+                  <img
+                    className="w-full h-48 object-cover"
+                    alt={item.title}
+                    src={item.imageKey}
+                  />
+                )}
+
+                <div className={`absolute top-2 right-2 px-3 py-1 text-xs font-semibold text-white rounded-full 
+                  ${item.category === 'Proximo' ? 'bg-brand-blue' : 'bg-brand-yellow text-gray-900'}`}>
+                  {item.category}
+                </div>
+              </div>
+
+              <CardHeader>
+                <CardTitle className="text-xl text-brand-blue">{item.title}</CardTitle>
+                <CardDescription className="text-sm text-yellow-600 flex items-center">
+                  {item.category === 'Evento'
+                    ? <CalendarDays className="mr-2 h-4 w-4" />
+                    : <Newspaper className="mr-2 h-4 w-4" />}
+                  {item.date}
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="flex-grow">
+                <p className="text-gray-700 text-sm">{item.description}</p>
+
+                {/* BOTÓN VER PDF */}
+                {item.pdfUrl && (
+                  <button
+                    onClick={() => setSelectedPdf(item.pdfUrl)}
+                    className="mt-4 w-full bg-brand-blue text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
+                  >
+                    Ver PDF
+                  </button>
+                )}
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* MODAL PDF */}
+      <PdfViewerModal
+        pdfUrl={selectedPdf}
+        onClose={() => setSelectedPdf(null)}
+      />
+    </PageLayout>
+  );
+};
+
+export default EventsPage;
+
